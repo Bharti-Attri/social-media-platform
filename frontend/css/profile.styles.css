@@ -1,0 +1,240 @@
+
+.profile-card {
+    width: 70%;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #060606bf;
+    border-radius: 10px;
+    color: #ffffff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-right: 15px;
+    }
+    .profile-info{
+        flex-direction: column;
+        text-align: left;
+        align-items: flex-start;
+    }
+}
+.followers,.following{
+    font-size: 14px;
+}
+.image-wrapper{
+    position: relative;
+}
+.change-image{
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+}
+
+
+.profile-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.profile-bio {
+    font-size: 0.9em;
+    color: #f4f4f4ad;
+    margin-bottom: 15px;
+}
+
+.profile-stats {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 20px;
+}
+
+.count {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.noPost{
+    width: 70%;
+    height: 40vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+}
+.posts-section{
+    width: 70%;
+    background-color: #060606bf;
+    margin: 20px auto;
+    .header{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 30px;
+        color: #ffffff;
+    }
+}
+.post-container{
+    display: flex;
+    padding: 2%;
+    flex-wrap: wrap;
+}
+.post{
+    flex:0 0 33.3%;
+    padding: 5px;
+    cursor: pointer;
+}
+.post-image {
+    width: 100%;
+    margin-bottom: 10px;
+    object-fit: cover;
+    height: clamp(200px,30vw,500px);
+}
+
+
+
+.input-card {
+    display: none;
+    width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #292929;
+    border-radius: 10px;
+    text-align: center;
+    position: fixed;
+    top: 20%;
+    left: calc(50% - 200px)
+}
+
+.close{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #424242c4;
+    color: #ffffff;
+    padding: 2px 12px;
+    padding-bottom: 3px;
+    font-size: 2rem;
+    border: 0;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.image-drop-area {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #f4f4f4ad;
+    margin-bottom: 15px;
+    position: relative;
+    background-color: #101010;
+}
+
+.image-drop-area p {
+    margin: 0;
+}
+
+
+.previewImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    object-fit: contain;
+    object-position: top;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+}
+.browse-btn{
+    color: #005bb5;
+    font-weight: bold;
+    cursor: pointer;
+}
+#updateProfileCard{
+    .image-drop-area,.previewImage{
+        border-radius: 50%;
+        width: 200px;
+        margin: auto;
+    }
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #f4f4f4ad;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    resize: none;
+    color: #ffffff;
+    font-size: 18px;
+    background-color: #060606bf;
+}
+
+.upload-btn{
+    background-color: #1a3a57;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    width: 100%;
+}
+
+.upload-btn:active {
+    background-color: #005bb5;
+}
+
+@media (max-width : 768px) {
+    .noPost,.posts-section,.profile-card{
+        width: 90%;
+    }
+    .input-card{
+        width: 450px;
+        left: calc(50% - 225px);
+    }
+    
+    .image-drop-area{
+        height: 180px;
+    }
+    .post-image{
+        height: clamp(200px,40vw,500px);
+    }
+    
+}
+@media (max-width : 480px) {
+    .profile-card{
+        flex-direction: column;
+        .profile-info{
+            align-items: center;
+        }
+        .profile-pic{
+            width: 180px;
+            height: 180px;
+        }
+    }
+    .post-image{
+        height: clamp(150px,60vw,400px);
+    }
+    .input-card{
+        width: 90%;
+        left: 5%;
+    }
+    .post{
+        flex:0 0 50%
+    }
+    
+}

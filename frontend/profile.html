@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>SocialMedia - Profile</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.styles.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="brand-title">SocialMedia</div>
+            <div class="navbar-links" id="navbar-links">
+                <a href="/"><img src="assets/svg/home.svg" alt=""></a>
+                <button type="button" onclick="logout()"><img src="assets/svg/logout.svg" alt=""></button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="profile-card">
+        </div>
+
+        <div class="posts-section">
+            <div class="header">
+            </div>
+            <div class="divider"></div>
+            <div class="post-container">
+            </div>
+        </div>
+        <div class="input-card" id="createPostCard">
+            <button type="button" class="close">x</button>
+            <div class="image-drop-area">
+                <p><span class="browse-btn"
+                        onclick="document.getElementById('postImage').click()">Browse</span> an Image</p>
+                <input type="file" class="imageInput" id="postImage" accept="image/*" style="display: none;">
+                <img class="previewImage" src="" alt="Preview" style="display: none;">
+            </div>
+            <textarea class="textInput" id="caption" placeholder="Write a caption..." rows="3"></textarea>
+            <button class="upload-btn" id="createPostBtn" disabled>Upload</button>
+        </div>
+        <div class="input-card" id="updateProfileCard">
+            <div class="image-drop-area">
+                <p><span class="browse-btn"
+                        onclick="document.getElementById('profilePic').click()">browse</span> an Image</p>
+                <input type="file" class="imageInput" id="profilePic" accept="image/*" style="display: none;">
+                <img class="previewImage" src="" alt="Preview" style="display: none;">
+            </div>
+            <textarea class="textInput" id="bio" placeholder="Share your interests and skills" rows="3"></textarea>
+            <button class="upload-btn" disabled>Update</button>
+        </div>
+
+    </main>
+    <script src="js/logout.js"></script>
+    <script type="module" src="js/upload.js"></script>
+    <script type="module" src="js/profile.js"></script>
+</body>
+
+</html>
