@@ -57,7 +57,6 @@ I wanted to deepen my skills in full-stack web development and experiment with b
 
 - Managing user authentication securely
 - Handling file uploads and storage
-- Building interactive UI components with React
 - Working with databases and RESTful APIs
 - Implementing responsive design for mobile users
 
